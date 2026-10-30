@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FreeFin demo: a freelancer's money, step by step</title>
+  <meta name="description" content="Guided FreeFin demo with sample data: job agreement, escrow, income record, loan and guarantee check, and a late-payment advance.">
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="demo.js"></script>
+</head>
+<body>
+  <p class="banner" role="note">Illustrative demo · sample data</p>
+
+  <header class="top">
+    <a class="wordmark" href="index.html" aria-label="FreeFin home"><span class="mark" aria-hidden="true"></span>FreeFin</a>
+    <a class="toplink" href="index.html">About FreeFin</a>
+  </header>
+
+  <main class="wrap">
+    <h1 class="sr-only">FreeFin guided demo</h1>
+    <nav class="rail" aria-label="Demo steps">
+      <ol id="rail"></ol>
+    </nav>
+
+    <div class="stage">
+      <section class="app" id="app" aria-label="FreeFin app">
+        <div class="appbar" id="appbar">
+          <div class="roles" role="group" aria-label="View the app as">
+            <button type="button" data-role="freelancer" aria-pressed="false">Freelancer</button>
+            <button type="button" data-role="client" aria-pressed="false">Client</button>
+            <button type="button" data-role="bank" aria-pressed="false">Bank</button>
+          </div>
+          <p class="who" id="who"></p>
+        </div>
+        <div class="view" id="main"></div>
+      </section>
+
+      <aside class="panel" aria-labelledby="panel-title">
+        <p class="panel-step" id="panel-step"></p>
+        <h2 class="panel-title" id="panel-title">What is happening</h2>
+        <div class="panel-text" id="panel"></div>
+        <div class="panel-nav">
+          <button type="button" class="btn ghost" id="back">Back</button>
+          <button type="button" class="btn sky" id="next">Next</button>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <p class="sr-only" id="status" aria-live="polite"></p>
+</body>
+</html>
